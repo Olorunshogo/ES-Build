@@ -1,7 +1,7 @@
 
 import * as esbuild from 'esbuild';
 
-await esbuild.build({
+let result = await esbuild.build({
     entryPoints: ['app.jsx', 'app.ts'], // Include both .jsx and .ts file
     bundle: true,
     // outfile: 'out.js', // Output into a single file
@@ -18,3 +18,5 @@ await esbuild.build({
         '.ts': '.ts',
    }
 });
+
+console.log(result);
